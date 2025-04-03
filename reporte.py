@@ -13,7 +13,7 @@ def generar_reporte_excel(json_file, excel_file):
     ws.title = "Registro"
 
     # Agregar título al reporte
-    ws.merge_cells("A1:H1")
+    ws.merge_cells("A1:Y1")
     titulo = ws.cell(row=1, column=1, value="Reportes")  # Título del reporte
     titulo.font = Font(bold=True, size=14)
     titulo.alignment = Alignment(horizontal='center')  # Centrar el título
@@ -27,7 +27,10 @@ def generar_reporte_excel(json_file, excel_file):
     )
 
     # Definir encabezados con columna de correlativo
-    encabezados = ["N°", "Número de DNI", "Apellidos y Nombres", "Correo", "Celular", "Sede", "Programa", "Fecha de Registro"]
+    encabezados = [
+        "N°", "Código", "Apellidos y Nombres", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20",
+        "Prom E.P.", "E.F.", "Prom T.A.", "E.P. (30%)", "E.F. (50%)", "Prom Final"
+    ]
     ws.append(encabezados)
 
     # Aplicar estilos a los encabezados
@@ -39,15 +42,29 @@ def generar_reporte_excel(json_file, excel_file):
 
     # Llenar los datos en la hoja con el correlativo
     for index, persona in enumerate(datos, start=1):
+        # Obtener los 20 días (si están presentes en el JSON)
+        dias = persona.get("dias", ["F"] * 20)  # Rellenar con 'F' si no hay datos
+
+        # Calcular los valores de las tareas académicas
+        prom_ep = persona.get("prom_ep", "")
+        ef = persona.get("ef", "")
+        prom_ta = persona.get("prom_ta", "")
+        ep_30 = prom_ep * 0.3 if prom_ep else ""
+        ef_50 = ef * 0.5 if ef else ""
+        prom_final = (ep_30 + ef_50) if ep_30 and ef_50 else ""
+
+        # Agregar los datos de cada persona en su fila
         row = [
             index,  # Correlativo
-            persona.get("dni", ""),
-            persona.get("nombre", ""),
-            persona.get("correo", ""),
-            persona.get("celular", ""),
-            persona.get("sede", ""),
-            persona.get("programa", ""),
-            persona.get("fecha_registro", "")
+            persona.get("codigo", ""),  # Código
+            persona.get("nombre", ""),  # Apellidos y nombres
+            *dias,  # Los 20 días (rellenar con valores de JSON o 'F')
+            prom_ep,  # Prom E.P.
+            ef,  # E.F.
+            prom_ta,  # Prom T.A.
+            ep_30,  # E.P. (30%)
+            ef_50,  # E.F. (50%)
+            prom_final  # Prom Final
         ]
         ws.append(row)
 
