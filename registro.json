@@ -1,80 +1,51 @@
 [
     {
-        "codigo": "001",
-        "nombre": "Juan Pérez",
-        "beca": "No Beca",
-        "tareas_academicas_prom_ta": 85,
-        "tareas_academicas_ep": 80,
-        "tareas_academicas_ef": 90,
-        "prom_ta": 88,
-        "ep_30": 85,
-        "ef_50": 92,
-        "prom_final": 89,
-        "evaluacion": "Aprobado"
+      "codigo": "001",
+      "nombre": "Juan Pérez",
+      "dias": ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A"],
+      "prom_ep": 80,
+      "ef": 90,
+      "prom_ta": 85
     },
     {
-        "codigo": "002",
-        "nombre": "Ana Gómez",
-        "beca": "35%",
-        "tareas_academicas_prom_ta": 75,
-        "tareas_academicas_ep": 85,
-        "tareas_academicas_ef": 90,
-        "prom_ta": 80,
-        "ep_30": 78,
-        "ef_50": 85,
-        "prom_final": 83,
-        "evaluacion": "Aprobado"
+      "codigo": "002",
+      "nombre": "Ana Gómez",
+      "dias": ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A"],
+      "prom_ep": 85,
+      "ef": 90,
+      "prom_ta": 75
     },
     {
-        "codigo": "003",
-        "nombre": "Carlos López",
-        "beca": "50%",
-        "tareas_academicas_prom_ta": 92,
-        "tareas_academicas_ep": 88,
-        "tareas_academicas_ef": 93,
-        "prom_ta": 90,
-        "ep_30": 88,
-        "ef_50": 91,
-        "prom_final": 89,
-        "evaluacion": "Aprobado"
+      "codigo": "003",
+      "nombre": "Carlos López",
+      "dias": ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A"],
+      "prom_ep": 88,
+      "ef": 93,
+      "prom_ta": 92
     },
     {
-        "codigo": "004",
-        "nombre": "Marta Rodríguez",
-        "beca": "100%",
-        "tareas_academicas_prom_ta": 78,
-        "tareas_academicas_ep": 85,
-        "tareas_academicas_ef": 92,
-        "prom_ta": 80,
-        "ep_30": 82,
-        "ef_50": 89,
-        "prom_final": 85,
-        "evaluacion": "Aprobado"
+      "codigo": "004",
+      "nombre": "Marta Rodríguez",
+      "dias": ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A"],
+      "prom_ep": 85,
+      "ef": 92,
+      "prom_ta": 78
     },
     {
-        "codigo": "005",
-        "nombre": "Luis Fernández",
-        "beca": "No Beca",
-        "tareas_academicas_prom_ta": 70,
-        "tareas_academicas_ep": 75,
-        "tareas_academicas_ef": 80,
-        "prom_ta": 72,
-        "ep_30": 76,
-        "ef_50": 79,
-        "prom_final": 78,
-        "evaluacion": "Aprobado"
+      "codigo": "005",
+      "nombre": "Luis Fernández",
+      "dias": ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A"],
+      "prom_ep": 75,
+      "ef": 80,
+      "prom_ta": 70
     },
     {
-        "codigo": "006",
-        "nombre": "Laura Martínez",
-        "beca": "35%",
-        "tareas_academicas_prom_ta": 88,
-        "tareas_academicas_ep": 84,
-        "tareas_academicas_ef": 91,
-        "prom_ta": 85,
-        "ep_30": 83,
-        "ef_50": 90,
-        "prom_final": 86,
-        "evaluacion": "Aprobado"
+      "codigo": "006",
+      "nombre": "Laura Martínez",
+      "dias": ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "A"],
+      "prom_ep": 84,
+      "ef": 91,
+      "prom_ta": 88
     }
-]
+  ]
+  

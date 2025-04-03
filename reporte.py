@@ -13,7 +13,7 @@ def generar_reporte_excel(json_file, excel_file):
     ws.title = "Registro"
 
     # Agregar título al reporte
-    ws.merge_cells("A1:Y1")
+    ws.merge_cells("A1:AC1")
     titulo = ws.cell(row=1, column=1, value="Reportes")  # Título del reporte
     titulo.font = Font(bold=True, size=14)
     titulo.alignment = Alignment(horizontal='center')  # Centrar el título
